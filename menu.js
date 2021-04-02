@@ -8,9 +8,9 @@ class Menu{
     save(cb){
         db.run('INSERT INTO Menu(title, restaurant_id) VALUES (?, ?)', [this.title, this.restaurant_id], cb );
     }
-    async addMenu(title) {
-        const menu = new Menu({title, restaurant_id: this.id})
-        this.menus.push(menu)
+    async addMenuItem(title) {
+        const addMenuItem = new menuItem({itemName, itemPrice, menu_id: this.id})
+        this.menuList.push(addMenuItem)
     }
 }
 
